@@ -33,7 +33,5 @@ WebUI.delay(3)
 
 WebUI.scrollToElement(findTestObject('Visual_Testing/Page_DEMOQA/boton_Submit'), 3)
 
-WebUI.takeScreenshotAsCheckpoint('Practice_Form')
-
 WebUI.closeBrowser()
 
