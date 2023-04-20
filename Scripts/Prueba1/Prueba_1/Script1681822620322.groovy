@@ -19,21 +19,31 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://demoqa.com/automation-practice-form')
+WebUI.navigateToUrl('https://demoqa.com/')
 
 WebUI.maximizeWindow()
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Name_firstName'), 'Mariana')
+WebUI.scrollToPosition(0, 120)
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Name_lastName'), 'Montenegro')
+WebUI.click(findTestObject('Prueba1/Page_DEMOQA/svg'))
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Email_userEmail'), 'mariana.montenegro77@gmail.com')
+WebUI.click(findTestObject('Prueba1/Page_DEMOQA/li_Text Box'))
 
-WebUI.delay(3)
+WebUI.setText(findTestObject('Object Repository/Prueba1/Page_DEMOQA/input_Full Name_userName'), 'Mariana Montenegro')
 
-WebUI.scrollToElement(findTestObject('Visual_Testing/Page_DEMOQA/boton_Submit'), 3)
+WebUI.setText(findTestObject('Object Repository/Prueba1/Page_DEMOQA/input_Email_userEmail'), 'mariana.montenegro77@gmail.com')
 
-WebUI.takeScreenshotAsCheckpoint('Form_Practice')
+WebUI.setText(findTestObject('Object Repository/Prueba1/Page_DEMOQA/textarea_Current Address_currentAddress'), 'Dire UNO')
+
+WebUI.setText(findTestObject('Object Repository/Prueba1/Page_DEMOQA/textarea_Permanent Address_permanentAddress'), 'Dire Dos')
+
+WebUI.scrollToPosition(0, 120)
+
+WebUI.click(findTestObject('Object Repository/Prueba1/Page_DEMOQA/button_Submit'))
+
+WebUI.verifyElementText(findTestObject('Object Repository/Prueba1/Page_DEMOQA/div_Text Box'), 'Text Box')
+
+WebUI.takeScreenshotAsCheckpoint('Form_text')
 
 WebUI.closeBrowser()
 

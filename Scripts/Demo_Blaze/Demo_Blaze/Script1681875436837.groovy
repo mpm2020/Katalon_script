@@ -19,21 +19,21 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://demoqa.com/automation-practice-form')
+WebUI.navigateToUrl('https://www.demoblaze.com/')
 
-WebUI.maximizeWindow()
+WebUI.click(findTestObject('Object Repository/Demo_Blaze/Page_STORE/a_Sign up'))
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Name_firstName'), 'Mariana')
+int RN
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Name_lastName'), 'Montenegro')
+RN = ((Math.random() * 500) as int)
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Email_userEmail'), 'mariana.montenegro77@gmail.com')
+WebUI.setText(findTestObject('Object Repository/Demo_Blaze/Page_STORE/input_Username_sign-username'), 'mariana' + RN)
 
-WebUI.delay(3)
+WebUI.setEncryptedText(findTestObject('Object Repository/Demo_Blaze/Page_STORE/input_Password_sign-password'), '5xx1bkCcAlw=')
 
-WebUI.scrollToElement(findTestObject('Visual_Testing/Page_DEMOQA/boton_Submit'), 3)
+WebUI.click(findTestObject('Object Repository/Demo_Blaze/Page_STORE/button_Sign up'))
 
-WebUI.takeScreenshotAsCheckpoint('Form_Practice')
+WebUI.verifyElementVisible(findTestObject('Object Repository/Demo_Blaze/Page_STORE/a_PRODUCT STORE'))
 
 WebUI.closeBrowser()
 

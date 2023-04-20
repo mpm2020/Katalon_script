@@ -19,21 +19,22 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://demoqa.com/automation-practice-form')
+WebUI.navigateToUrl('http://demo.seleniumeasy.com/basic-first-form-demo.html')
 
-WebUI.maximizeWindow()
+WebUI.setText(findTestObject('Object Repository/Prueba2/Page_Selenium Easy Demo - Simple Form to Au_3f5468/input_Enter message_user-message'), 
+    'Hola Mariana')
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Name_firstName'), 'Mariana')
+WebUI.click(findTestObject('Object Repository/Prueba2/Page_Selenium Easy Demo - Simple Form to Au_3f5468/button_Show Message'))
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Name_lastName'), 'Montenegro')
+WebUI.setText(findTestObject('Object Repository/Prueba2/Page_Selenium Easy Demo - Simple Form to Au_3f5468/input_Enter a_sum1'), 
+    '3')
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Email_userEmail'), 'mariana.montenegro77@gmail.com')
+WebUI.setText(findTestObject('Object Repository/Prueba2/Page_Selenium Easy Demo - Simple Form to Au_3f5468/input_Enter b_sum2'), 
+    '4')
 
-WebUI.delay(3)
+WebUI.click(findTestObject('Object Repository/Prueba2/Page_Selenium Easy Demo - Simple Form to Au_3f5468/button_Get Total'))
 
-WebUI.scrollToElement(findTestObject('Visual_Testing/Page_DEMOQA/boton_Submit'), 3)
-
-WebUI.takeScreenshotAsCheckpoint('Form_Practice')
+WebUI.takeScreenshotAsCheckpoint('Image')
 
 WebUI.closeBrowser()
 

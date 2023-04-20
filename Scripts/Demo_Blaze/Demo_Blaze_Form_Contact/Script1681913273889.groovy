@@ -19,21 +19,19 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://demoqa.com/automation-practice-form')
+WebUI.navigateToUrl('https://www.demoblaze.com/')
 
-WebUI.maximizeWindow()
+WebUI.click(findTestObject('Object Repository/Demo_Blaze/Page_STORE/a_Contact'))
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Name_firstName'), 'Mariana')
+WebUI.setText(findTestObject('Object Repository/Demo_Blaze/Page_STORE/input_Contact Email_recipient-email'), 'mariana.montenegro77@gmail.com')
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Name_lastName'), 'Montenegro')
+WebUI.setText(findTestObject('Object Repository/Demo_Blaze/Page_STORE/input_Contact Name_recipient-name'), 'Mariana')
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Email_userEmail'), 'mariana.montenegro77@gmail.com')
+WebUI.setText(findTestObject('Object Repository/Demo_Blaze/Page_STORE/textarea_Message_message-text'), 'Esto es un Test')
 
-WebUI.delay(3)
+WebUI.click(findTestObject('Object Repository/Demo_Blaze/Page_STORE/button_Send message'))
 
-WebUI.scrollToElement(findTestObject('Visual_Testing/Page_DEMOQA/boton_Submit'), 3)
-
-WebUI.takeScreenshotAsCheckpoint('Form_Practice')
+WebUI.acceptAlert()
 
 WebUI.closeBrowser()
 

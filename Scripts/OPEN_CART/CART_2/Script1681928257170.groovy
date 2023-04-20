@@ -19,21 +19,23 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://demoqa.com/automation-practice-form')
+WebUI.navigateToUrl('https://opencart.abstracta.us/')
 
 WebUI.maximizeWindow()
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Name_firstName'), 'Mariana')
+WebUI.click(findTestObject('Object Repository/OPEN_CART/Page_Your Store/a_Contact Us'))
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Name_lastName'), 'Montenegro')
+WebUI.setText(findTestObject('Object Repository/OPEN_CART/Page_Your Store/input_Your Name_name'), 'Mariana')
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Email_userEmail'), 'mariana.montenegro77@gmail.com')
+WebUI.setText(findTestObject('Object Repository/OPEN_CART/Page_Your Store/input_E-Mail Address_email'), 'mariana.montenegro77@gmail.com')
 
-WebUI.delay(3)
+WebUI.setText(findTestObject('Object Repository/OPEN_CART/Page_Your Store/textarea_Enquiry_enquiry'), 'This a test')
 
-WebUI.scrollToElement(findTestObject('Visual_Testing/Page_DEMOQA/boton_Submit'), 3)
+WebUI.click(findTestObject('Object Repository/OPEN_CART/Page_Your Store/input_Enquiry_btn btn-primary'))
 
-WebUI.takeScreenshotAsCheckpoint('Form_Practice')
+WebUI.scrollToPosition(0, 120)
+
+WebUI.click(findTestObject('Object Repository/OPEN_CART/Page_Your Store/a_Continue'))
 
 WebUI.closeBrowser()
 

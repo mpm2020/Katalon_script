@@ -19,21 +19,19 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://demoqa.com/automation-practice-form')
+WebUI.navigateToUrl('https://www.saucedemo.com/')
 
 WebUI.maximizeWindow()
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Name_firstName'), 'Mariana')
+WebUI.setText(findTestObject('Object Repository/Sauce_Labs/Page_Swag Labs/input_Swag Labs_user-name'), 'standard_user')
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Name_lastName'), 'Montenegro')
+WebUI.setEncryptedText(findTestObject('Object Repository/Sauce_Labs/Page_Swag Labs/input_Swag Labs_password'), 'qcu24s4901FyWDTwXGr6XA==')
 
-WebUI.setText(findTestObject('Object Repository/Visual_Testing/Page_DEMOQA/input_Email_userEmail'), 'mariana.montenegro77@gmail.com')
+WebUI.click(findTestObject('Object Repository/Sauce_Labs/Page_Swag Labs/input_Swag Labs_login-button'))
 
 WebUI.delay(3)
 
-WebUI.scrollToElement(findTestObject('Visual_Testing/Page_DEMOQA/boton_Submit'), 3)
-
-WebUI.takeScreenshotAsCheckpoint('Form_Practice')
+WebUI.verifyElementText(findTestObject('Object Repository/Sauce_Labs/Page_Swag Labs/div_Swag Labs'), 'Swag Labs')
 
 WebUI.closeBrowser()
 
